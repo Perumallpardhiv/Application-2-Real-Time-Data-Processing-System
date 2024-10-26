@@ -1,10 +1,20 @@
-function checkThreshold(weatherData) {
-    const thresholdTemp = 5;
-    console.log(`Checking temperature for ${weatherData.city}...`);
-    const alert = weatherData.temp > thresholdTemp ?
-        `ALERT: Temperature in ${weatherData.city} is ${weatherData.temp}°C` : null;
+// Store previous temperatures for each city
+const lastTemperatures = {};
 
-    return alert;
+function checkThreshold(weatherData) {
+    const thresholdTemp = 30;
+    const city = weatherData.city;
+
+    // Retrieve the last temperature for the city
+    const lastTemp = lastTemperatures[city];
+    lastTemperatures[city] = weatherData.temp;  // Update with the current temperature
+
+    // Check if both the current and last temperatures are above the threshold
+    if (lastTemp !== undefined && lastTemp > thresholdTemp && weatherData.temp > thresholdTemp) {
+        return `ALERT: Temperature in ${city} has consecutively exceeded ${thresholdTemp}°C, current temp: ${weatherData.temp}°C`;
+    }
+
+    return null;
 }
 
 module.exports = { checkThreshold };
