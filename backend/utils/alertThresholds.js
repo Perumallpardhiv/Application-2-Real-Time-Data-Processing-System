@@ -12,6 +12,7 @@ function checkThreshold(weatherData) {
     // Check if both the current and last temperatures are above the threshold
     if (lastTemp !== undefined && lastTemp > thresholdTemp && weatherData.temp > thresholdTemp) {
         return `ALERT: Temperature in ${city} has consecutively exceeded ${thresholdTemp}°C, current temp: ${weatherData.temp}°C`;
+        // return `ALERT: Temperature in ${weatherData.city} is ${weatherData.temp}°C`
     }
 
     return null;
