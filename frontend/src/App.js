@@ -81,10 +81,7 @@ const App = () => {
 
   // Function to convert Celsius to Kelvin
   const celsiusToKelvin = (temp) => temp + 273.15;
-
-  // Function to convert Kelvin to Celsius
-  const kelvinToCelsius = (temp) => temp - 273.15;
-
+  
   // Function to toggle temperature unit
   const toggleTemperatureUnit = () => {
     setIsCelsius((prev) => !prev);
