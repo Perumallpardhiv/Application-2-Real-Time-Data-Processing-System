@@ -1,4 +1,4 @@
-# Zeotap Assignment 2 - Real-Time Data Processing System for Weather Monitoring
+# Zeotap Application 2 - Real-Time Data Processing System for Weather Monitoring
 
 This project is a real-time data processing system designed to monitor weather conditions for major metropolitan areas in India using data from the OpenWeatherMap API. The system retrieves weather data continuously, performs analysis, and generates daily summaries using rollups and aggregates, including key metrics such as average, maximum, and minimum temperatures as well as dominant weather conditions. With configurable alert thresholds, users receive notifications when specific temperature or weather conditions are met. Additionally, the system includes visualization tools for displaying daily summaries and triggered alerts, allowing for comprehensive weather tracking and analysis.
 
